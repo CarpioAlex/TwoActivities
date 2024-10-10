@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TwoActivities</string>
+
+    <string name ="text_button_1">Click to go to activity 2</string>
+    <string name ="text_button_2">Click to go back to the start.</string>
+    <string name="text1">Welcome to the double activity program</string>
+
+    <string name="text2">Welcome to the second activity.</string>
+
+
+    <string name="extra_output">No extra yet.</string>
+
+</resources>
