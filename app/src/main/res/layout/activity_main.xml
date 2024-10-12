@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:backgroundTint="#FFFFFF"
+    android:backgroundTint="#EDEBEB"
     tools:context=".MainActivity">
 
     <TextView
@@ -17,31 +17,36 @@
         android:layout_marginTop="356dp"
         android:layout_marginEnd="164dp"
         android:layout_marginBottom="356dp"
+        android:rotation="0"
         android:text="@string/text1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/buttonMainActivity"
+        style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
-        android:layout_marginTop="243dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="160dp"
         android:layout_marginBottom="65dp"
-        android:background="#C73232"
-        android:backgroundTint="#CA2323"
-        android:backgroundTintMode="screen"
         android:onClick="goToActivity"
         android:text="@string/text_button_1"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FF1010"
+        app:backgroundTint="#F48FB1"
+        app:iconTint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
-        />
+        app:layout_constraintVertical_bias="0.563"
+        app:rippleColor="#DB1414" />
 
     <EditText
         android:id="@+id/extraInput"
@@ -66,13 +71,12 @@
         android:layout_marginTop="84dp"
         android:layout_marginEnd="162dp"
         android:layout_marginBottom="192dp"
+        android:onClick="goToActivityForResult"
         android:text="Click to go to act2 and retrieve a result"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/extraInput"
-        android:onClick="goToActivityForResult"
-        />
+        app:layout_constraintTop_toTopOf="@+id/extraInput" />
 
     <TextView
         android:id="@+id/resultText"
@@ -87,5 +91,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/resultButton" />
+
+    <TextView
+        android:id="@+id/welcomeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="61dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/text3"
+        android:textColor="#FF0808"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMainActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

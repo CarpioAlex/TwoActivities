@@ -24,6 +24,9 @@
 
         <activity android:label="@string/text2" android:name="SecondActivity"/>
 
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
 
     </application>

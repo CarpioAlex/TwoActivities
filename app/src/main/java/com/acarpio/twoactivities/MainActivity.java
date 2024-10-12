@@ -18,7 +18,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     static final String TAG = "ONLOGGING";
-
+    public boolean forResult = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         // Ading the extra to the intent:
         // The key will be used to retrieve it in the second activity, and extra is the actual text.
         intent.putExtra("mySuperExtra", extra);
+        Log.d(TAG, "Going to second activity with an extra: " + extra);
         startActivity(intent);
         finish();
     }
@@ -60,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
     // Method that goes to second activity for result
     public void goToActivityForResult(View myView) {
         Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra("forResultBool", true);
+        Log.d(TAG, "Going to second activity for result");
+
         startActivityForResult(intent, 1);
     }
 
@@ -68,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
-
+        Log.d(TAG, "onActivityResult callback called!");
         String returnString = intent.getStringExtra("result");
 
         TextView resultText = findViewById(R.id.resultText);
@@ -76,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
 
 
 
@@ -110,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
     public void onRestart() {
         super.onRestart();
 
-        Log.d(TAG, "Entered onRestart");
+                Log.d(TAG, "Entered onRestart");
 
     }
 
